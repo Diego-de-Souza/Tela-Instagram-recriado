@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Instagram</title>
+</head>
+<body>
+    <div class="instagram-wrapper">
+        <div class="instagram-phone">
+            <img src="./img/instagram-celular.png" alt="celular">
+            <img src="img/insta_feeds01.jpg" alt="" id="imgtransl1">
+            <img src="img/insta_feeds02.jpg" alt="" id="imgtransl2">
+            <img src="img/insta_feeds03.jpg" alt="" id="imgtransl3">
+            <img src="img/insta_feeds04.jpg" alt="" id="imgtransl4">
+            
+        </div>
+        <div class="instagram-continue">
+            <div class="group">
+                <img src="./img/instagram-logo.png" class="instagram-logo" alt="instagram logo">
+                <div class="profile-photo">
+                    <img src="./img/perfil-instagram.jpg" alt="foto de perfil">
+                </div>
+                <a href="#" class="instagram-login">Continue como Diegodesouza</a>
+                <a href="#" class="instagram-logout">Remover conta</a>
+            </div>
+            <div class="group">
+                <p class="not-account">Não é sprucegabriela?</p>
+                <p class="not-account">
+                    <span class="link-blue">Alternar contas</span>
+                    ou
+                    <span class="link-blue">Inscreva-se</span>
+                </p>
+            </div>
+            <div class="get-the-app">
+                <p class="get-app">Baixe o aplicativo</p>
+                <div class="download">
+                    <a href="#" class="app-download"></a>
+                    <a href="#" class="app-download"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var temp = 1
+        function mudaFoto() {
+            if(temp<=4){
+            document.getElementById('imgtransl'+temp).style.opacity = '1'
+            } else {
+                temp = 0
+                document.getElementById('imgtransl1').style.opacity = '0'
+                document.getElementById('imgtransl2').style.opacity = '0'
+                document.getElementById('imgtransl3').style.opacity = '0'
+                document.getElementById('imgtransl4').style.opacity = '0'
+            }
+            temp++
+        }
+
+        setInterval('mudaFoto()',2000);
+
+        console.log(temp)
+   </script>
+</body>
+</html>
+
